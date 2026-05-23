@@ -23,8 +23,8 @@ TaskHub is a robust, full-stack task management platform built using a modern mi
 | Layer | Technology | Port | Description |
 | :--- | :--- | :--- | :--- |
 | **Frontend** | React.js (Vite) + CSS | `5173` | Client Dashboard UI |
-| **API Gateway** | Python FastAPI | `8002` | Request routing & middleware hub |
-| **Core Backend** | Java Spring Boot | `8001` | Business logic & data processing |
+| **API Gateway** | Python FastAPI | `8001` | Request routing & middleware hub |
+| **Core Backend** | Java Spring Boot | `8003` | Business logic & data processing |
 | **Database** | MySQL | `3306` | Persistent relational storage |
 
 ---
@@ -41,7 +41,7 @@ TaskHub-Management-System/
 
 ┌──────────────────┐      🚀 HTTP      ┌─────────────────────┐
 │  React Frontend  │ ────────────────> │   FastAPI Gateway   │
-│   (Port 5173)    │                   │     (Port 8002)     │
+│   (Port 5173)    │                   │     (Port 8001)     │
 └──────────────────┘                   └─────────────────────┘
                                                   │
                                                   │ 🛠️ Micro-routing
