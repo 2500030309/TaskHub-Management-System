@@ -53,3 +53,16 @@ async def getAllUsers(PAGE: int, SIZE: int, Token:str = Header(...)):
             headers = {"Token":Token}
         )
         return response.json()
+
+
+from models.schemas import SigninSchema, SignupSchema, UserSchema
+
+@router.post("/saveuser")
+async def saveUser(data: UserSchema, Token: str = Header(...)):
+    async with httpx.AsyncClient() as client:
+        response = await client.post(
+            SPRING_URL + f"user/saveuser",
+            json=data.model_dump(),
+            headers = {"Token": Token}
+        )
+    return response.json()
